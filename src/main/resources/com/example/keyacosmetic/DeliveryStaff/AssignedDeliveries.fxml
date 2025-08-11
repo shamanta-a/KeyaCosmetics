@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="myDeliveriesPane" prefHeight="322.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AssignedDeliveriesController">
+    <children>
+        <Label layoutX="14" layoutY="14" text="My Deliveries">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font></Label>
+        <TableView fx:id="deliveriesTable" layoutX="14" layoutY="50" prefHeight="200" prefWidth="396.0">
+         <columns>
+            <TableColumn fx:id="parcelidTC" prefWidth="75.0" text="parcel ID" />
+            <TableColumn fx:id="CustomerNameTC" prefWidth="134.4000244140625" text="Customer name " />
+            <TableColumn fx:id="AddressTC" minWidth="7.199951171875" prefWidth="63.99998474121094" text="Address" />
+            <TableColumn fx:id="ParcelStatusTC" minWidth="7.20001220703125" prefWidth="120.0" text="parcel status" />
+         </columns></TableView>
+        <Button fx:id="refreshBtn" layoutX="15.0" layoutY="261.0" onAction="#RefreshOA" text="Refresh" />
+    </children>
+</AnchorPane>

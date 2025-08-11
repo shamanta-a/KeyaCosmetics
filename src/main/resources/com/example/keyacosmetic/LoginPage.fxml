@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="506.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.keyacosmetic.LoginPageController">
+   <children>
+      <Label layoutX="174.0" layoutY="14.0" prefHeight="53.0" prefWidth="140.0" text="Login">
+         <font>
+            <Font name="System Bold" size="42.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="140.0" text="User ID :" />
+      <TextField fx:id="UseridTF" layoutX="158.0" layoutY="135.0" prefHeight="26.0" prefWidth="202.0" />
+      <PasswordField fx:id="PassTF" layoutX="158.0" layoutY="177.0" prefHeight="26.0" prefWidth="201.0" />
+      <Button layoutX="205.0" layoutY="239.0" mnemonicParsing="false" onAction="#LoginOA" prefHeight="26.0" prefWidth="77.0" text="Login" />
+      <Button layoutX="361.0" layoutY="340.0" mnemonicParsing="false" onAction="#CreateaccountOA" prefHeight="26.0" prefWidth="105.0" text="Create Account" />
+      <Label layoutX="57.0" layoutY="182.0" text="Pass :" />
+   </children>
+</AnchorPane>
