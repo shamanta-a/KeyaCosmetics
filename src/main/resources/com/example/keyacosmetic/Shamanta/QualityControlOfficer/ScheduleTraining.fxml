@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="trainingSchedulePane" prefHeight="200" prefWidth="400" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.keyacosmetic.Shamanta.QualityControlOfficer.ScheduleTrainingController">
+    <children>
+        <DatePicker fx:id="trainingDate" layoutX="14" layoutY="14" />
+        <TextField fx:id="topicField" layoutX="14" layoutY="50" promptText="Training Topic" />
+        <TextField fx:id="trainerField" layoutX="14" layoutY="90" promptText="Trainer Name" />
+        <Button fx:id="scheduleBtn" layoutX="14" layoutY="130" onAction="#scheduleOA" text="Schedule" />
+    </children>
+</AnchorPane>

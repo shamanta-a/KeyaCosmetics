@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="472.0" prefWidth="797.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.keyacosmetic.Shamanta.DeliveryStaff.DashboardController">
+    <children>
+        <Label layoutX="250.0" layoutY="20.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Delivery Staff Dashboard" />
+        <VBox layoutX="280.0" layoutY="70.0" spacing="10.0">
+            <Button fx:id="btnMyDeliveries" onAction="#handleMyDeliveries" text="My Deliveries" />
+            <Button fx:id="btnPickupPackage" onAction="#handlePickupPackage" text="Pickup Package" />
+            <Button fx:id="btnDeliveryStatus" onAction="#handleDeliveryStatus" text="Change Delivery Status" />
+            <Button fx:id="btnSignature" onAction="#handleSignature" text="Capture Signature" />
+            <Button fx:id="btnReportIssue" onAction="#handleReportIssue" text="Report Delivery Issue" />
+            <Button fx:id="btnNavigation" onAction="#handleNavigation" text="Navigation Assistance" />
+            <Button fx:id="btnSummaryReport" onAction="#handleSummaryReport" text="Daily Summary Report" />
+            <Button fx:id="btnVerifyOtp" onAction="#handleVerifyOtp" text="Verify Delivery with OTP" />
+        </VBox>
+    </children>
+</AnchorPane>
