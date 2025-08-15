@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nafi.simulatingoperationsofkeyacosmeticsltd.Marketing Specialist.SeasonalOffersController">
+   <children>
+      <ComboBox fx:id="offerTemplateComboBox" layoutX="22.0" layoutY="33.0" prefWidth="150.0" promptText="Pre-built offer templates" />
+      <TextField fx:id="productsListTextField" layoutX="39.0" layoutY="92.0" text="Products applicable" />
+      <DatePicker fx:id="offerStartyDatePicker" layoutX="261.0" layoutY="20.0" />
+      <TextField fx:id="discountTextField" layoutX="240.0" layoutY="105.0" text="Discount %" />
+      <Button layoutX="45.0" layoutY="146.0" mnemonicParsing="false" onAction="#TheOfferButtonOnAction" text="LaunchTheOffer" />
+      <DatePicker fx:id="offerEndDatePicker" layoutX="271.0" layoutY="58.0" />
+   </children>
+</AnchorPane>

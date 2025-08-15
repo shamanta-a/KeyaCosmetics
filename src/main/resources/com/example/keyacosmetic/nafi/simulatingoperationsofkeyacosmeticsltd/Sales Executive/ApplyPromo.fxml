@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nafi.simulatingoperationsofkeyacosmeticsltd.Sales Executive.ApplyPromoController">
+   <children>
+      <Label layoutX="59.0" layoutY="44.0" prefHeight="17.0" prefWidth="0.0" />
+      <Label fx:id="discountStatus" layoutX="69.0" layoutY="56.0" text="Show validation result" />
+      <Label fx:id="finalPrice" layoutX="69.0" layoutY="117.0" prefHeight="17.0" prefWidth="117.0" text="Updated total price" />
+      <TextField fx:id="promoCodeTextField" layoutX="308.0" layoutY="40.0" text="Enter promo code" />
+      <Button layoutX="317.0" layoutY="81.0" mnemonicParsing="false" onAction="#ApplyButtonOnAction" text="Apply" />
+      <Label fx:id="appliedDiscount" layoutX="69.0" layoutY="85.0" prefHeight="17.0" prefWidth="117.0" text="Show applied discount" />
+   </children>
+</AnchorPane>

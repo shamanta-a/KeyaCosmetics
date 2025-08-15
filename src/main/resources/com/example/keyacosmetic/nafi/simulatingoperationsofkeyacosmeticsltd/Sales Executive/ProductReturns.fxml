@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nafi.simulatingoperationsofkeyacosmeticsltd.Sales Executive.ProductReturnsController">
+   <children>
+      <Label layoutX="39.0" layoutY="51.0" />
+      <Label fx:id="statuslevel" layoutX="56.0" layoutY="63.0" text="Show confirmation" />
+      <Label fx:id="inventoryUpdate" layoutX="56.0" layoutY="105.0" prefHeight="17.0" prefWidth="122.0" text="Notify about inventory sync" />
+      <Button layoutX="329.0" layoutY="194.0" mnemonicParsing="false" onAction="#approveButtonOnAction" text="btnApprove" />
+      <TextArea fx:id="approvalOrRejectionTextArea" layoutX="292.0" layoutY="66.0" prefHeight="78.0" prefWidth="154.0" text="Input reason for approval/rejection&#10;&#10;" />
+      <TableView fx:id="ListOfReturnTableView" layoutX="39.0" layoutY="207.0" prefHeight="163.0" prefWidth="154.0">
+        <columns>
+          <TableColumn fx:id="ListOfReturnRequestTableColumn" prefWidth="150.66665649414062" text="List Of Return Request" />
+          <TableColumn minWidth="0.0" prefWidth="0.0" />
+        </columns>
+      </TableView>
+      <Button layoutX="343.0" layoutY="239.0" mnemonicParsing="false" onAction="#RejectButtonOnAction" text="btnReject" />
+   </children>
+</AnchorPane>

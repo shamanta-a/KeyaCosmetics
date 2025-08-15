@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nafi.simulatingoperationsofkeyacosmeticsltd.Marketing Specialist.ViewOrdersController">
+   <children>
+      <Label fx:id="errorMessage" layoutX="64.0" layoutY="43.0" prefHeight="17.0" prefWidth="218.0" text="Optional validation message" />
+      <Button fx:id="viewdetailsButtonOnAction" layoutX="66.0" layoutY="90.0" mnemonicParsing="false" text="View selected order's full detail" />
+      <ComboBox fx:id="StatusFilterComboBox" layoutX="325.0" layoutY="39.0" prefWidth="150.0" promptText="Filter by status" />
+      <TextField fx:id="customerNameTextField" layoutX="325.0" layoutY="77.0" prefHeight="25.0" prefWidth="211.0" text="Search by customer name" />
+      <TableView fx:id="OrderIDTableView" layoutX="125.0" layoutY="152.0" prefHeight="200.0" prefWidth="305.0">
+        <columns>
+          <TableColumn fx:id="OrderIdTableColumn" prefWidth="75.0" text="Order ID" />
+          <TableColumn fx:id="customerNameTableColumn" prefWidth="75.0" text="customer name" />
+            <TableColumn fx:id="DateTableColumn" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="StatusTableColumn" prefWidth="75.0" text="Status" />
+        </columns>
+      </TableView>
+      <TextField fx:id="OrderIdTextFZield" layoutX="325.0" layoutY="115.0" prefHeight="25.0" prefWidth="211.0" text="Order ID" />
+   </children>
+</AnchorPane>

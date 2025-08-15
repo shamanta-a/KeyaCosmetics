@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nafi.simulatingoperationsofkeyacosmeticsltd.Marketing Specialist.CollaborationBoardController">
+   <children>
+      <TextField fx:id="taskTitleTextField" layoutX="24.0" layoutY="37.0" text="taskTitle" />
+      <TextArea fx:id="textDetails" layoutX="386.0" layoutY="21.0" prefHeight="101.0" prefWidth="135.0" text="Text Details&#10;" />
+      <ComboBox fx:id="assignedUserComboBox" layoutX="24.0" layoutY="86.0" prefWidth="150.0" promptText="Designer or writer" />
+      <Button layoutX="38.0" layoutY="130.0" mnemonicParsing="false" onAction="#createTaskButtonOnAction" text="CreateTask" />
+      <Label fx:id="taskStatus" layoutX="407.0" layoutY="134.0" text="taskStatus" />
+      <TableView fx:id="taskTableView" layoutX="38.0" layoutY="171.0" prefHeight="200.0" prefWidth="228.0">
+        <columns>
+          <TableColumn fx:id="TaskIdTableColumn" prefWidth="75.0" text="TaskID" />
+          <TableColumn fx:id="AssignedToTableColumn" prefWidth="75.0" text="Assigned To" />
+            <TableColumn fx:id="StatusTableColumn" prefWidth="75.0" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
