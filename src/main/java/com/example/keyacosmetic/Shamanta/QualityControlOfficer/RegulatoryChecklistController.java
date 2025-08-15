@@ -1,27 +1,79 @@
 package com.example.keyacosmetic.Shamanta.QualityControlOfficer;
 
-import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 
-public class RegulatoryChecklistController
-{
-    @javafx.fxml.FXML
-    private Button btnExport;
-    @javafx.fxml.FXML
-    private Button btnValidate;
-    @javafx.fxml.FXML
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class RegulatoryChecklistController implements Initializable {
+
+    @FXML
     private TextArea checklistArea;
 
-    @javafx.fxml.FXML
-    public void initialize() {
+    @FXML
+    private Button btnValidate;
+
+    @FXML
+    private Button btnExport;
+
+    // Constructor
+    public RegulatoryChecklistController() {
+        // Any initialization logic if needed
     }
 
-    @javafx.fxml.FXML
-    public void handleValidateChecklist(ActionEvent actionEvent) {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        // Optional: Set initial text or other setup
+        checklistArea.setWrapText(true);
     }
 
-    @javafx.fxml.FXML
-    public void handleExportReport(ActionEvent actionEvent) {
+    @FXML
+    private void handleValidateChecklist() {
+        String checklistText = checklistArea.getText();
+
+        // Validation
+        if (checklistText == null || checklistText.trim().isEmpty()) {
+            showAlert(Alert.AlertType.WARNING, "Validation Error", "Please enter checklist items before validation.");
+            return;
+        }
+
+        // Placeholder: implement real validation logic here
+        showAlert(Alert.AlertType.INFORMATION, "Validation Complete", "Checklist entries validated successfully!");
     }
+
+    @FXML
+    private void handleExportReport() {
+        String checklistText = checklistArea.getText();
+
+        // Validation: ensure there's something to export
+        if (checklistText == null || checklistText.trim().isEmpty()) {
+            showAlert(Alert.AlertType.WARNING, "Export Error", "No checklist items to export.");
+            return;
+        }
+
+        // Placeholder: implement export logic here (e.g., save to PDF or CSV)
+        showAlert(Alert.AlertType.INFORMATION, "Export Successful", "Checklist exported successfully!");
+    }
+
+    private void showAlert(Alert.AlertType type, String title, String message) {
+        Alert alert = new Alert(type);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    // Getters and Setters
+    public TextArea getChecklistArea() { return checklistArea; }
+    public void setChecklistArea(TextArea checklistArea) { this.checklistArea = checklistArea; }
+
+    public Button getBtnValidate() { return btnValidate; }
+    public void setBtnValidate(Button btnValidate) { this.btnValidate = btnValidate; }
+
+    public Button getBtnExport() { return btnExport; }
+    public void setBtnExport(Button btnExport) { this.btnExport = btnExport; }
 }

@@ -1,60 +1,102 @@
 package com.example.keyacosmetic.Shamanta.DeliveryStaff;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
-public class DashboardController
-{
-    @javafx.fxml.FXML
-    private Button btnPickupPackage;
-    @javafx.fxml.FXML
-    private Button btnDeliveryStatus;
-    @javafx.fxml.FXML
-    private Button btnNavigation;
-    @javafx.fxml.FXML
-    private Button btnReportIssue;
-    @javafx.fxml.FXML
-    private Button btnSummaryReport;
-    @javafx.fxml.FXML
-    private Button btnMyDeliveries;
-    @javafx.fxml.FXML
-    private Button btnVerifyOtp;
-    @javafx.fxml.FXML
-    private Button btnSignature;
+import java.io.IOException;
 
-    @javafx.fxml.FXML
-    public void initialize() {
+public class DashboardController {
+
+    @FXML
+    private Button btnMyDeliveries, btnPickupPackage, btnDeliveryStatus, btnSignature,
+            btnReportIssue, btnNavigation, btnSummaryReport, btnVerifyOtp;
+
+    // Constructor
+    public DashboardController() {
+        // Any initialization if needed
     }
 
-    @javafx.fxml.FXML
-    public void handlePickupPackage(ActionEvent actionEvent) {
+    // Helper method to load a new FXML scene
+    private void openScene(String fxmlFile, String title) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+            AnchorPane root = loader.load();
+            Stage stage = new Stage();
+            stage.setTitle(title);
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    @javafx.fxml.FXML
-    public void handleSummaryReport(ActionEvent actionEvent) {
+    @FXML
+    private void handleMyDeliveries(ActionEvent event) {
+        openScene("/com/example/keyacosmetic/Shamanta/DeliveryStaff/MyDeliveries.fxml", "My Deliveries");
     }
 
-    @javafx.fxml.FXML
-    public void handleReportIssue(ActionEvent actionEvent) {
+    @FXML
+    private void handlePickupPackage(ActionEvent event) {
+        openScene("/com/example/keyacosmetic/Shamanta/DeliveryStaff/PickupPackage.fxml", "Pickup Package");
     }
 
-    @javafx.fxml.FXML
-    public void handleSignature(ActionEvent actionEvent) {
+    @FXML
+    private void handleDeliveryStatus(ActionEvent event) {
+        openScene("/com/example/keyacosmetic/Shamanta/DeliveryStaff/DeliveryStatus.fxml", "Change Delivery Status");
     }
 
-    @javafx.fxml.FXML
-    public void handleVerifyOtp(ActionEvent actionEvent) {
+    @FXML
+    private void handleSignature(ActionEvent event) {
+        openScene("/com/example/keyacosmetic/Shamanta/DeliveryStaff/CaptureSignature.fxml", "Capture Signature");
     }
 
-    @javafx.fxml.FXML
-    public void handleNavigation(ActionEvent actionEvent) {
+    @FXML
+    private void handleReportIssue(ActionEvent event) {
+        openScene("/com/example/keyacosmetic/Shamanta/DeliveryStaff/ReportIssue.fxml", "Report Delivery Issue");
     }
 
-    @javafx.fxml.FXML
-    public void handleMyDeliveries(ActionEvent actionEvent) {
+    @FXML
+    private void handleNavigation(ActionEvent event) {
+        openScene("/com/example/keyacosmetic/Shamanta/DeliveryStaff/NavigationAssistance.fxml", "Navigation Assistance");
     }
 
-    @javafx.fxml.FXML
-    public void handleDeliveryStatus(ActionEvent actionEvent) {
+    @FXML
+    private void handleSummaryReport(ActionEvent event) {
+        openScene("/com/example/keyacosmetic/Shamanta/DeliveryStaff/DailySummaryReport.fxml", "Daily Summary Report");
     }
+
+    @FXML
+    private void handleVerifyOtp(ActionEvent event) {
+        openScene("/com/example/keyacosmetic/Shamanta/DeliveryStaff/VerifyOtp.fxml", "Verify Delivery with OTP");
+    }
+
+    // Getters and Setters for all buttons
+    public Button getBtnMyDeliveries() { return btnMyDeliveries; }
+    public void setBtnMyDeliveries(Button btnMyDeliveries) { this.btnMyDeliveries = btnMyDeliveries; }
+
+    public Button getBtnPickupPackage() { return btnPickupPackage; }
+    public void setBtnPickupPackage(Button btnPickupPackage) { this.btnPickupPackage = btnPickupPackage; }
+
+    public Button getBtnDeliveryStatus() { return btnDeliveryStatus; }
+    public void setBtnDeliveryStatus(Button btnDeliveryStatus) { this.btnDeliveryStatus = btnDeliveryStatus; }
+
+    public Button getBtnSignature() { return btnSignature; }
+    public void setBtnSignature(Button btnSignature) { this.btnSignature = btnSignature; }
+
+    public Button getBtnReportIssue() { return btnReportIssue; }
+    public void setBtnReportIssue(Button btnReportIssue) { this.btnReportIssue = btnReportIssue; }
+
+    public Button getBtnNavigation() { return btnNavigation; }
+    public void setBtnNavigation(Button btnNavigation) { this.btnNavigation = btnNavigation; }
+
+    public Button getBtnSummaryReport() { return btnSummaryReport; }
+    public void setBtnSummaryReport(Button btnSummaryReport) { this.btnSummaryReport = btnSummaryReport; }
+
+    public Button getBtnVerifyOtp() { return btnVerifyOtp; }
+    public void setBtnVerifyOtp(Button btnVerifyOtp) { this.btnVerifyOtp = btnVerifyOtp; }
 }

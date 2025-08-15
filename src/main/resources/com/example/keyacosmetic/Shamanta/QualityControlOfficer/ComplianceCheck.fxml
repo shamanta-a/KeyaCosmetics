@@ -11,5 +11,6 @@
         <TextField fx:id="dimensionField" layoutX="14" layoutY="50" promptText="Enter Dimension" />
         <TextField fx:id="weightField" layoutX="14" layoutY="90" promptText="Enter Weight" />
         <Button fx:id="submitBtn" layoutX="14" layoutY="130" onAction="#submitOA" text="Submit" />
+        <Label fx:id="summaryLabel" layoutX="14" layoutY="162.0" prefHeight="26.0" prefWidth="263.0" text="" /> 
     </children>
 </AnchorPane>

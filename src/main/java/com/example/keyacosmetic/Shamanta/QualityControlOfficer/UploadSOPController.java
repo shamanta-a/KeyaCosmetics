@@ -1,27 +1,101 @@
 package com.example.keyacosmetic.Shamanta.QualityControlOfficer;
 
-import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
-public class UploadSOPController
-{
-    @javafx.fxml.FXML
-    private Button uploadCompareBtn;
-    @javafx.fxml.FXML
+import java.io.File;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class UploadSOPController implements Initializable {
+
+    @FXML
     private TextField versionNoteField;
-    @javafx.fxml.FXML
+
+    @FXML
     private Button chooseSOPFileBtn;
 
-    @javafx.fxml.FXML
-    public void initialize() {
+    @FXML
+    private Button uploadCompareBtn;
+
+    private File selectedFile;
+
+    // Constructor
+    public UploadSOPController() {
+        // Any initialization logic if needed
     }
 
-    @javafx.fxml.FXML
-    public void handleChooseSOPFile(ActionEvent actionEvent) {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        // Optional initialization
     }
 
-    @javafx.fxml.FXML
-    public void handleUploadSOP(ActionEvent actionEvent) {
+    @FXML
+    private void handleChooseSOPFile() {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Choose SOP File");
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("PDF Files", "*.pdf"),
+                new FileChooser.ExtensionFilter("Word Documents", "*.docx")
+        );
+
+        Stage stage = (Stage) chooseSOPFileBtn.getScene().getWindow();
+        selectedFile = fileChooser.showOpenDialog(stage);
+
+        if (selectedFile != null) {
+            versionNoteField.setText("Selected: " + selectedFile.getName());
+        }
     }
+
+    @FXML
+    private void handleUploadSOP() {
+        String versionNote = versionNoteField.getText();
+
+        // Validation
+        if (selectedFile == null) {
+            showAlert(Alert.AlertType.WARNING, "Validation Error", "Please choose a SOP file before uploading.");
+            return;
+        }
+
+        if (!selectedFile.getName().endsWith(".pdf") && !selectedFile.getName().endsWith(".docx")) {
+            showAlert(Alert.AlertType.WARNING, "Validation Error", "Only PDF or DOCX files are allowed.");
+            return;
+        }
+
+        if (versionNote == null || versionNote.trim().isEmpty()) {
+            showAlert(Alert.AlertType.WARNING, "Validation Error", "Please enter a version note.");
+            return;
+        }
+
+        // Placeholder: implement upload and comparison logic here
+        showAlert(Alert.AlertType.INFORMATION, "Upload Successful",
+                "SOP file uploaded successfully!\nFile: " + selectedFile.getName() + "\nVersion Note: " + versionNote);
+
+        // Optionally reset fields
+        versionNoteField.clear();
+        selectedFile = null;
+    }
+
+    private void showAlert(Alert.AlertType type, String title, String message) {
+        Alert alert = new Alert(type);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    // Getters and Setters
+    public TextField getVersionNoteField() { return versionNoteField; }
+    public void setVersionNoteField(TextField versionNoteField) { this.versionNoteField = versionNoteField; }
+
+    public Button getChooseSOPFileBtn() { return chooseSOPFileBtn; }
+    public void setChooseSOPFileBtn(Button chooseSOPFileBtn) { this.chooseSOPFileBtn = chooseSOPFileBtn; }
+
+    public Button getUploadCompareBtn() { return uploadCompareBtn; }
+    public void setUploadCompareBtn(Button uploadCompareBtn) { this.uploadCompareBtn = uploadCompareBtn; }
 }
