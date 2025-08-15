@@ -17,9 +17,9 @@ public class SummaryReportController implements Initializable {
     @FXML
     private TextArea summaryOutput;
 
-    // Constructor
+
     public SummaryReportController() {
-        // Initialization if needed
+
     }
 
     @Override
@@ -30,7 +30,7 @@ public class SummaryReportController implements Initializable {
 
     @FXML
     private void ReportOA() {
-        // Placeholder: replace with actual data retrieval and calculations
+
         String summary = "Daily Delivery Summary Report\n";
         summary += "---------------------------------\n";
         summary += "Total Deliveries Assigned: 10\n";
@@ -42,7 +42,7 @@ public class SummaryReportController implements Initializable {
 
         summaryOutput.setText(summary);
 
-        // Optional: show an alert that report has been generated
+
         showAlert(Alert.AlertType.INFORMATION, "Report Generated", "Daily summary report generated successfully!");
     }
 
@@ -54,7 +54,7 @@ public class SummaryReportController implements Initializable {
         alert.showAndWait();
     }
 
-    // Getters and Setters
+
     public Button getGenerateReportBtn() { return generateReportBtn; }
     public void setGenerateReportBtn(Button generateReportBtn) { this.generateReportBtn = generateReportBtn; }
 

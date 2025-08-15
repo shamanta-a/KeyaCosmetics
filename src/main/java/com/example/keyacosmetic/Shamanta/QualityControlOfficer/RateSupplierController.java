@@ -27,20 +27,20 @@ public class RateSupplierController implements Initializable {
     @FXML
     private Button submitRatingBtn;
 
-    // Constructor
+
     public RateSupplierController() {
-        // Any initialization logic if needed
+
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Populate supplier dropdown with example data (replace with real supplier list)
+
         ObservableList<String> suppliers = FXCollections.observableArrayList(
                 "Supplier A", "Supplier B", "Supplier C"
         );
         supplierDropdown.setItems(suppliers);
 
-        // Optional: Set default rating
+
         ratingSlider.setValue(5);
     }
 
@@ -50,19 +50,19 @@ public class RateSupplierController implements Initializable {
         double rating = ratingSlider.getValue();
         String comments = commentsField.getText();
 
-        // Validation
+
         if (selectedSupplier == null || selectedSupplier.trim().isEmpty()) {
             showAlert(Alert.AlertType.WARNING, "Validation Error", "Please select a supplier.");
             return;
         }
 
-        // Placeholder: Save rating logic
+
         showAlert(Alert.AlertType.INFORMATION, "Rating Submitted",
                 "Supplier: " + selectedSupplier +
                         "\nRating: " + rating +
                         "\nComments: " + (comments.isEmpty() ? "None" : comments));
 
-        // Optionally clear inputs after submission
+
         supplierDropdown.getSelectionModel().clearSelection();
         ratingSlider.setValue(5);
         commentsField.clear();
@@ -76,7 +76,7 @@ public class RateSupplierController implements Initializable {
         alert.showAndWait();
     }
 
-    // Getters and Setters
+
     public ComboBox<String> getSupplierDropdown() { return supplierDropdown; }
     public void setSupplierDropdown(ComboBox<String> supplierDropdown) { this.supplierDropdown = supplierDropdown; }
 

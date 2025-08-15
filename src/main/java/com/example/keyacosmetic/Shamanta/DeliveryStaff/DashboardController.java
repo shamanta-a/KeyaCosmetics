@@ -16,12 +16,12 @@ public class DashboardController {
     private Button btnMyDeliveries, btnPickupPackage, btnDeliveryStatus, btnSignature,
             btnReportIssue, btnNavigation, btnSummaryReport, btnVerifyOtp;
 
-    // Constructor
+
     public DashboardController() {
-        // Any initialization if needed
+
     }
 
-    // Helper method to load a new FXML scene
+
     private void openScene(String fxmlFile, String title) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
@@ -75,7 +75,7 @@ public class DashboardController {
         openScene("/com/example/keyacosmetic/Shamanta/DeliveryStaff/VerifyOtp.fxml", "Verify Delivery with OTP");
     }
 
-    // Getters and Setters for all buttons
+
     public Button getBtnMyDeliveries() { return btnMyDeliveries; }
     public void setBtnMyDeliveries(Button btnMyDeliveries) { this.btnMyDeliveries = btnMyDeliveries; }
 

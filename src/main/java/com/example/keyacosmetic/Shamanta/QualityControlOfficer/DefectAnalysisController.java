@@ -49,16 +49,16 @@ public class DefectAnalysisController implements Initializable {
     private void analyzeOA() {
         String batchRange = batchRangeField.getText();
 
-        // Validation
+
         if (batchRange == null || batchRange.trim().isEmpty()) {
             showAlert(Alert.AlertType.WARNING, "Validation Error", "Please enter a batch range to analyze.");
             return;
         }
 
-        // Placeholder: analyze defect data for given batch range
+
         ObservableList<DefectRecord> data = FXCollections.observableArrayList();
 
-        // Example dummy data (replace with actual analysis logic)
+
         data.add(new DefectRecord("Batch 001", 5, 2.5));
         data.add(new DefectRecord("Batch 002", 3, 1.5));
 
@@ -75,7 +75,7 @@ public class DefectAnalysisController implements Initializable {
         alert.showAndWait();
     }
 
-    // Getters and setters
+
     public TextField getBatchRangeField() { return batchRangeField; }
     public void setBatchRangeField(TextField batchRangeField) { this.batchRangeField = batchRangeField; }
 
@@ -85,7 +85,7 @@ public class DefectAnalysisController implements Initializable {
     public TableView<DefectRecord> getDefectTable() { return defectTable; }
     public void setDefectTable(TableView<DefectRecord> defectTable) { this.defectTable = defectTable; }
 
-    // Inner class representing a defect record
+
     public static class DefectRecord {
         private final String batch;
         private final int defectCount;

@@ -25,9 +25,9 @@ public class DeliveryIssuesController implements Initializable {
 
     private File attachedPhoto;
 
-    // Constructor
+
     public DeliveryIssuesController() {
-        // Any initialization logic if needed
+
     }
 
     @Override
@@ -55,18 +55,18 @@ public class DeliveryIssuesController implements Initializable {
     private void submitreportOA() {
         String issueText = issueField.getText();
 
-        // Validation
+
         if (issueText == null || issueText.trim().isEmpty()) {
             showAlert(Alert.AlertType.WARNING, "Validation Error", "Please describe the issue before submitting.");
             return;
         }
 
-        // Placeholder: Save issue report logic here
+
         String photoInfo = (attachedPhoto != null) ? attachedPhoto.getName() : "No photo attached";
         showAlert(Alert.AlertType.INFORMATION, "Report Submitted",
                 "Issue submitted successfully!\nIssue: " + issueText + "\nPhoto: " + photoInfo);
 
-        // Optionally clear inputs after submission
+
         issueField.clear();
         attachedPhoto = null;
     }
@@ -79,7 +79,7 @@ public class DeliveryIssuesController implements Initializable {
         alert.showAndWait();
     }
 
-    // Getters and Setters
+
     public TextArea getIssueField() { return issueField; }
     public void setIssueField(TextArea issueField) { this.issueField = issueField; }
 

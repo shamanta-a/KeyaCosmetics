@@ -22,9 +22,9 @@ public class SignatureController implements Initializable {
 
     private GraphicsContext gc;
 
-    // Constructor
+
     public SignatureController() {
-        // Initialization if needed
+
     }
 
     @Override
@@ -32,11 +32,10 @@ public class SignatureController implements Initializable {
         gc = signatureCanvas.getGraphicsContext2D();
         clearCanvas();
 
-        // Enable drawing on canvas
+
         signatureCanvas.addEventHandler(MouseEvent.MOUSE_PRESSED, this::startDraw);
         signatureCanvas.addEventHandler(MouseEvent.MOUSE_DRAGGED, this::draw);
 
-        // Set submit button action
         submitSignatureBtn.setOnAction(event -> submitSignature());
     }
 
@@ -52,10 +51,10 @@ public class SignatureController implements Initializable {
     }
 
     private void submitSignature() {
-        // Placeholder: implement saving or processing signature image
+
         showAlert(Alert.AlertType.INFORMATION, "Signature Submitted", "Digital signature captured successfully!");
 
-        // Clear the canvas after submission if needed
+
         clearCanvas();
     }
 
@@ -74,7 +73,7 @@ public class SignatureController implements Initializable {
         alert.showAndWait();
     }
 
-    // Getters and Setters
+
     public Canvas getSignatureCanvas() { return signatureCanvas; }
     public void setSignatureCanvas(Canvas signatureCanvas) { this.signatureCanvas = signatureCanvas; }
 

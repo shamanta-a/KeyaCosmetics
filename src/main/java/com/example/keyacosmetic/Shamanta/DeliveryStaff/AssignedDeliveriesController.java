@@ -33,32 +33,32 @@ public class AssignedDeliveriesController implements Initializable {
     @FXML
     private Button refreshBtn;
 
-    // Constructor
+
     public AssignedDeliveriesController() {
-        // Initialization if needed
+
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Initialize table columns
+
         parcelidTC.setCellValueFactory(new PropertyValueFactory<>("parcelId"));
         CustomerNameTC.setCellValueFactory(new PropertyValueFactory<>("customerName"));
         AddressTC.setCellValueFactory(new PropertyValueFactory<>("address"));
         ParcelStatusTC.setCellValueFactory(new PropertyValueFactory<>("parcelStatus"));
 
-        // Load initial data
+
         loadDeliveryData();
     }
 
     @FXML
     private void RefreshOA() {
-        // Placeholder: refresh the delivery data
+
         loadDeliveryData();
         showAlert(Alert.AlertType.INFORMATION, "Refreshed", "Delivery data refreshed successfully!");
     }
 
     private void loadDeliveryData() {
-        // Placeholder: replace with actual data fetching logic
+
         ObservableList<DeliveryRecord> data = FXCollections.observableArrayList();
         data.add(new DeliveryRecord("P001", "Alice Smith", "123 Main St", "Pending"));
         data.add(new DeliveryRecord("P002", "Bob Johnson", "456 Oak Ave", "Picked Up"));
@@ -75,7 +75,7 @@ public class AssignedDeliveriesController implements Initializable {
         alert.showAndWait();
     }
 
-    // Inner class representing a delivery record
+
     public static class DeliveryRecord {
         private final String parcelId;
         private final String customerName;
@@ -95,7 +95,7 @@ public class AssignedDeliveriesController implements Initializable {
         public String getParcelStatus() { return parcelStatus; }
     }
 
-    // Getters and Setters
+
     public TableView<DeliveryRecord> getDeliveriesTable() { return deliveriesTable; }
     public void setDeliveriesTable(TableView<DeliveryRecord> deliveriesTable) { this.deliveriesTable = deliveriesTable; }
 

@@ -11,7 +11,7 @@ import java.util.ResourceBundle;
 
 public class DashboardController implements Initializable {
 
-    // FXML buttons
+
     @FXML
     private Button btnComplianceCheck;
 
@@ -36,15 +36,15 @@ public class DashboardController implements Initializable {
     @FXML
     private Button btnRegulatoryChecklist;
 
-    // Constructor
+
     public DashboardController() {
-        // Any initialization logic if needed
+
     }
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Optional: add button hover effects, disable buttons initially, etc.
+
     }
 
 
@@ -96,7 +96,7 @@ public class DashboardController implements Initializable {
         // TODO: Navigate to regulatory checklist screen
     }
 
-    // Utility method to show information alerts
+
     private void showInfo(String title, String message) {
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle(title);
@@ -105,7 +105,7 @@ public class DashboardController implements Initializable {
         alert.showAndWait();
     }
 
-    // Getters and Setters
+
     public Button getBtnComplianceCheck() { return btnComplianceCheck; }
     public void setBtnComplianceCheck(Button btnComplianceCheck) { this.btnComplianceCheck = btnComplianceCheck; }
 

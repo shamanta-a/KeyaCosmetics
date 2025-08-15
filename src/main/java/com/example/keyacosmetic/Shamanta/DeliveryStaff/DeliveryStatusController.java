@@ -22,9 +22,9 @@ public class DeliveryStatusController implements Initializable {
     @FXML
     private Button updateStatusBtn;
 
-    // Constructor
+
     public DeliveryStatusController() {
-        // Initialization if needed
+
     }
 
     @Override
@@ -43,7 +43,7 @@ public class DeliveryStatusController implements Initializable {
         String selectedDelivery = deliveryDropdown.getValue();
         String selectedStatus = statusDropdown.getValue();
 
-        // Validation
+
         if (selectedDelivery == null || selectedDelivery.trim().isEmpty()) {
             showAlert(Alert.AlertType.WARNING, "Validation Error", "Please select a delivery.");
             return;
@@ -54,11 +54,11 @@ public class DeliveryStatusController implements Initializable {
             return;
         }
 
-        // Placeholder: implement logic to update status in database/system
+
         showAlert(Alert.AlertType.INFORMATION, "Status Updated",
                 "Delivery: " + selectedDelivery + "\nUpdated Status: " + selectedStatus);
 
-        // Optionally reset dropdowns
+
         deliveryDropdown.getSelectionModel().clearSelection();
         statusDropdown.getSelectionModel().clearSelection();
     }
@@ -71,7 +71,7 @@ public class DeliveryStatusController implements Initializable {
         alert.showAndWait();
     }
 
-    // Getters and Setters
+
     public ComboBox<String> getDeliveryDropdown() { return deliveryDropdown; }
     public void setDeliveryDropdown(ComboBox<String> deliveryDropdown) { this.deliveryDropdown = deliveryDropdown; }
 

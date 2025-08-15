@@ -20,14 +20,14 @@ public class RegulatoryChecklistController implements Initializable {
     @FXML
     private Button btnExport;
 
-    // Constructor
+
     public RegulatoryChecklistController() {
-        // Any initialization logic if needed
+
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Optional: Set initial text or other setup
+
         checklistArea.setWrapText(true);
     }
 
@@ -35,13 +35,13 @@ public class RegulatoryChecklistController implements Initializable {
     private void handleValidateChecklist() {
         String checklistText = checklistArea.getText();
 
-        // Validation
+
         if (checklistText == null || checklistText.trim().isEmpty()) {
             showAlert(Alert.AlertType.WARNING, "Validation Error", "Please enter checklist items before validation.");
             return;
         }
 
-        // Placeholder: implement real validation logic here
+
         showAlert(Alert.AlertType.INFORMATION, "Validation Complete", "Checklist entries validated successfully!");
     }
 
@@ -49,13 +49,13 @@ public class RegulatoryChecklistController implements Initializable {
     private void handleExportReport() {
         String checklistText = checklistArea.getText();
 
-        // Validation: ensure there's something to export
+
         if (checklistText == null || checklistText.trim().isEmpty()) {
             showAlert(Alert.AlertType.WARNING, "Export Error", "No checklist items to export.");
             return;
         }
 
-        // Placeholder: implement export logic here (e.g., save to PDF or CSV)
+
         showAlert(Alert.AlertType.INFORMATION, "Export Successful", "Checklist exported successfully!");
     }
 
@@ -67,7 +67,7 @@ public class RegulatoryChecklistController implements Initializable {
         alert.showAndWait();
     }
 
-    // Getters and Setters
+
     public TextArea getChecklistArea() { return checklistArea; }
     public void setChecklistArea(TextArea checklistArea) { this.checklistArea = checklistArea; }
 

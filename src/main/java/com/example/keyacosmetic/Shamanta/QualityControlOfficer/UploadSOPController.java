@@ -25,14 +25,14 @@ public class UploadSOPController implements Initializable {
 
     private File selectedFile;
 
-    // Constructor
+
     public UploadSOPController() {
-        // Any initialization logic if needed
+
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Optional initialization
+
     }
 
     @FXML
@@ -56,7 +56,7 @@ public class UploadSOPController implements Initializable {
     private void handleUploadSOP() {
         String versionNote = versionNoteField.getText();
 
-        // Validation
+
         if (selectedFile == null) {
             showAlert(Alert.AlertType.WARNING, "Validation Error", "Please choose a SOP file before uploading.");
             return;
@@ -72,11 +72,11 @@ public class UploadSOPController implements Initializable {
             return;
         }
 
-        // Placeholder: implement upload and comparison logic here
+
         showAlert(Alert.AlertType.INFORMATION, "Upload Successful",
                 "SOP file uploaded successfully!\nFile: " + selectedFile.getName() + "\nVersion Note: " + versionNote);
 
-        // Optionally reset fields
+
         versionNoteField.clear();
         selectedFile = null;
     }
@@ -89,7 +89,7 @@ public class UploadSOPController implements Initializable {
         alert.showAndWait();
     }
 
-    // Getters and Setters
+    
     public TextField getVersionNoteField() { return versionNoteField; }
     public void setVersionNoteField(TextField versionNoteField) { this.versionNoteField = versionNoteField; }
 

@@ -25,14 +25,14 @@ public class ScheduleTrainingController implements Initializable {
     @FXML
     private Button scheduleBtn;
 
-    // Constructor
+
     public ScheduleTrainingController() {
-        // Any initialization if needed
+
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Optional: Set default date to today
+
         trainingDate.setValue(LocalDate.now());
     }
 
@@ -42,7 +42,7 @@ public class ScheduleTrainingController implements Initializable {
         String topic = topicField.getText();
         String trainer = trainerField.getText();
 
-        // Validation
+
         if (date == null) {
             showAlert(Alert.AlertType.WARNING, "Validation Error", "Please select a training date.");
             return;
@@ -56,14 +56,14 @@ public class ScheduleTrainingController implements Initializable {
             return;
         }
 
-        // Placeholder: Save training schedule logic here
+
         showAlert(Alert.AlertType.INFORMATION, "Training Scheduled",
                 "Training scheduled successfully!\n" +
                         "Date: " + date + "\n" +
                         "Topic: " + topic + "\n" +
                         "Trainer: " + trainer);
 
-        // Optionally clear fields after scheduling
+
         trainingDate.setValue(LocalDate.now());
         topicField.clear();
         trainerField.clear();
@@ -77,7 +77,7 @@ public class ScheduleTrainingController implements Initializable {
         alert.showAndWait();
     }
 
-    // Getters and Setters
+
     public DatePicker getTrainingDate() { return trainingDate; }
     public void setTrainingDate(DatePicker trainingDate) { this.trainingDate = trainingDate; }
 

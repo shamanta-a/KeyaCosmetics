@@ -17,12 +17,12 @@ public class DeliveryVerificationController implements Initializable {
     @FXML
     private Button verifyOtpBtn;
 
-    // Placeholder OTP for demonstration purposes
+
     private final String VALID_OTP = "123456";
 
-    // Constructor
+
     public DeliveryVerificationController() {
-        // Any initialization if needed
+
     }
 
     @Override
@@ -34,20 +34,20 @@ public class DeliveryVerificationController implements Initializable {
     private void VerifyOA() {
         String enteredOtp = otpField.getText();
 
-        // Validation
+
         if (enteredOtp == null || enteredOtp.trim().isEmpty()) {
             showAlert(Alert.AlertType.WARNING, "Validation Error", "Please enter the OTP.");
             return;
         }
 
-        // Placeholder: actual OTP verification logic should be implemented here
+
         if (enteredOtp.equals(VALID_OTP)) {
             showAlert(Alert.AlertType.INFORMATION, "Verification Successful", "OTP verified successfully!");
         } else {
             showAlert(Alert.AlertType.ERROR, "Verification Failed", "Invalid OTP. Please try again.");
         }
 
-        // Optionally clear the OTP field after verification
+
         otpField.clear();
     }
 
@@ -59,7 +59,7 @@ public class DeliveryVerificationController implements Initializable {
         alert.showAndWait();
     }
 
-    // Getters and Setters
+
     public TextField getOtpField() { return otpField; }
     public void setOtpField(TextField otpField) { this.otpField = otpField; }
 

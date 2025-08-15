@@ -12,7 +12,7 @@ import java.util.ResourceBundle;
 
 public class AuditController implements Initializable {
 
-    // FXML components
+
     @FXML
     private Button scanLocationBtn;
 
@@ -22,22 +22,22 @@ public class AuditController implements Initializable {
     @FXML
     private Button submitAuditBtn;
 
-    // Constructor
+
     public AuditController() {
-        // Any necessary initialization can go here
+
     }
 
-    // Initialize method called after FXML is loaded
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Optional: Setup any initial state or listeners
-        checklistArea.setWrapText(true); // example: wrap text in the checklist area
+
+        checklistArea.setWrapText(true);
     }
 
-    // Method to handle scanning location (QR/GPS)
+
     @FXML
     private void ScanOA() {
-        // Placeholder logic: implement QR/GPS scanning
+
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Scan Location");
         alert.setHeaderText(null);
@@ -45,12 +45,12 @@ public class AuditController implements Initializable {
         alert.showAndWait();
     }
 
-    // Method to handle submitting the audit
+
     @FXML
     private void submitOA() {
         String checklistText = checklistArea.getText();
 
-        // Validation: ensure checklist is not empty
+
         if (checklistText == null || checklistText.trim().isEmpty()) {
             Alert alert = new Alert(AlertType.WARNING);
             alert.setTitle("Validation Error");
@@ -60,18 +60,18 @@ public class AuditController implements Initializable {
             return;
         }
 
-        // Placeholder: Save audit data logic here
+
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Audit Submitted");
         alert.setHeaderText(null);
         alert.setContentText("Audit checklist submitted successfully!");
         alert.showAndWait();
 
-        // Optionally clear checklist after submission
+
         checklistArea.clear();
     }
 
-    // Getters and Setters (if needed)
+
     public Button getScanLocationBtn() {
         return scanLocationBtn;
     }

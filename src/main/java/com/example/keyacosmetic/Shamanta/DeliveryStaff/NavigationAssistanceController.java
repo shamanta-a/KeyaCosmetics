@@ -21,14 +21,14 @@ public class NavigationAssistanceController implements Initializable {
     @FXML
     private Button getDirectionsBtn;
 
-    // Constructor
+
     public NavigationAssistanceController() {
-        // Initialization if needed
+
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Placeholder: list of deliveries (replace with real data)
+
         ObservableList<String> deliveries = FXCollections.observableArrayList(
                 "P001 - Alice Smith - 123 Main St",
                 "P002 - Bob Johnson - 456 Oak Ave",
@@ -46,7 +46,7 @@ public class NavigationAssistanceController implements Initializable {
             return;
         }
 
-        // Placeholder: extract address (assuming format "P001 - Name - Address")
+
         String[] parts = selectedDelivery.split(" - ");
         if (parts.length < 3) {
             showAlert(Alert.AlertType.ERROR, "Error", "Invalid delivery format.");
@@ -55,7 +55,7 @@ public class NavigationAssistanceController implements Initializable {
         String address = parts[2];
 
         try {
-            // Open Google Maps with the delivery address
+
             String mapUrl = "https://www.google.com/maps/dir/?api=1&destination=" + address.replace(" ", "+");
             if (Desktop.isDesktopSupported()) {
                 Desktop.getDesktop().browse(new URI(mapUrl));
@@ -76,7 +76,7 @@ public class NavigationAssistanceController implements Initializable {
         alert.showAndWait();
     }
 
-    // Getters and Setters
+
     public ComboBox<String> getDeliverySelector() { return deliverySelector; }
     public void setDeliverySelector(ComboBox<String> deliverySelector) { this.deliverySelector = deliverySelector; }
 
