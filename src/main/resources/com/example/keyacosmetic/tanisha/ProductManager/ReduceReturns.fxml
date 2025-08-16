@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300" prefWidth="400" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.final_project_summer.ReduceReturnsController">
+    <Label fx:id="investigateProduct" layoutX="20" layoutY="20" text="Investigate Product Returns" />
+    <TextField fx:id="returnRequestField" layoutX="20" layoutY="60" prefWidth="200" promptText="Customer Return Request" />
+    <Button layoutX="20" layoutY="100" onAction="#handleReviewReturn" text="Review &amp; Approve Refund" />
+    <Label fx:id="repeatReturnFlagLabel" layoutX="20" layoutY="140" text="Repeat return flag" />
+</AnchorPane>

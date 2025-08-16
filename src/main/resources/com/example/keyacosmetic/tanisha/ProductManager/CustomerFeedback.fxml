@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="467.0" prefWidth="412.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.final_project_summer.CustomerFeedbackController">
+    <Label layoutX="20" layoutY="20" text="Respond to Customer Feedback" />
+    <ComboBox fx:id="feedbackComboBox" layoutX="20" layoutY="60" prefWidth="200" />
+    <TextArea fx:id="responseField" layoutX="20" layoutY="100" prefHeight="100" prefWidth="300" promptText="Enter Response" />
+    <Button layoutX="20" layoutY="210" onAction="#handleSendResponse" text="Send Response" />
+    <Label fx:id="responseConfirmationLabel" layoutX="20" layoutY="250" text="Response confirmation" />
+</AnchorPane>

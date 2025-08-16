@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="424.0" prefWidth="436.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.final_project_summer.ScheduleProductionController">
+    <Label fx:id="scheduleProduction" layoutX="20" layoutY="20" text="Schedule Production Run" />
+    <TextField fx:id="productIdField" layoutX="20" layoutY="60" prefWidth="200" promptText="Enter Product ID" />
+    <TextField fx:id="quantityField" layoutX="20" layoutY="100" prefWidth="200" promptText="Enter Quantity" />
+    <Button layoutX="20" layoutY="140" onAction="#handleCheckAvailability" text="Check Availability" />
+    <Label fx:id="scheduleLabel" layoutX="20" layoutY="180" text="Production schedule will appear here" />
+</AnchorPane>
