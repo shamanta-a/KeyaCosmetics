@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.final_project_summer.ProductManagerDashboardController"
+            prefWidth="600" prefHeight="400">
+
+    <Label text="Product Manager Dashboard" layoutX="180" layoutY="20" style="-fx-font-size: 20px;"/>
+
+    <Button text="Launch New Product" layoutX="50" layoutY="80" prefWidth="200"
+            onAction="#handleLaunchProduct"/>
+    <Button text="Set Pricing Strategy" layoutX="50" layoutY="120" prefWidth="200"
+            onAction="#handlePricingStrategy"/>
+    <Button text="Enhance Product Design" layoutX="50" layoutY="160" prefWidth="200"
+            onAction="#handleEnhanceDesign"/>
+    <Button text="Approve Marketing Materials" layoutX="50" layoutY="200" prefWidth="200"
+            onAction="#handleApproveMarketing"/>
+    <Button text="Grow Brand Visibility" layoutX="50" layoutY="240" prefWidth="200"
+            onAction="#handleBrandVisibility"/>
+    <Button text="Monitor Product Performance" layoutX="350" layoutY="80" prefWidth="200"
+            onAction="#handleMonitorPerformance"/>
+    <Button text="Respond to Customer Feedback" layoutX="350" layoutY="120" prefWidth="200"
+            onAction="#handleCustomerFeedback"/>
+    <Button text="Reduce Product Returns" layoutX="350" layoutY="160" prefWidth="200"
+            onAction="#handleReduceReturns"/>
+
+</AnchorPane>
+

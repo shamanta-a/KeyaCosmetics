@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="361.0" prefWidth="426.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.final_project_summer.ReduceDowntimeController">
+    <Label layoutX="20" layoutY="20" text="Reduce Downtime" />
+    <ComboBox fx:id="equipmentComboBox" layoutX="20" layoutY="60" prefWidth="200" />
+    <Button layoutX="20" layoutY="100" onAction="#handleFetchMaintenance" text="Fetch Maintenance Info" />
+    <Label fx:id="nextMaintenanceLabel" layoutX="20" layoutY="140" text="Next maintenance info" />
+</AnchorPane>

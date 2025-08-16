@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="421.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.final_project_summer.LaunchProductController">
+    <Label layoutX="20" layoutY="20" text="Launch New Product" />
+    <TextField fx:id="productNameField" layoutX="20" layoutY="60" prefWidth="200" promptText="Product Name" />
+    <TextField fx:id="ingredientsField" layoutX="20" layoutY="100" prefWidth="200" promptText="Ingredients" />
+    <TextField fx:id="priceField" layoutX="20" layoutY="140" prefWidth="200" promptText="Price" />
+    <Button layoutX="20" layoutY="180" onAction="#handleCreateProduct" text="Create Product" />
+    <Label fx:id="confirmationLabel" layoutX="20" layoutY="220" text="Creation confirmation" />
+</AnchorPane>

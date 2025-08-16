@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.final_project_summer.FactoryManagerDashboardController" prefWidth="400" prefHeight="400">
+
+    <Label text="Factory Floor Manager Dashboard" layoutX="50" layoutY="20" style="-fx-font-size: 18px;"/>
+
+    <Button text="Schedule Production" layoutX="50" layoutY="60" prefWidth="300" onAction="#openScheduleProduction"/>
+    <Button text="Maintain Quality" layoutX="50" layoutY="100" prefWidth="300" onAction="#openMaintainQuality"/>
+    <Button text="Workplace Safety" layoutX="50" layoutY="140" prefWidth="300" onAction="#openWorkplaceSafety"/>
+    <Button text="Reduce Downtime" layoutX="50" layoutY="180" prefWidth="300" onAction="#openReduceDowntime"/>
+    <Button text="Production Deadlines" layoutX="50" layoutY="220" prefWidth="300" onAction="#openProductionDeadlines"/>
+    <Button text="Control Costs" layoutX="50" layoutY="260" prefWidth="300" onAction="#openControlCosts"/>
+    <Button text="Workforce Management" layoutX="50" layoutY="300" prefWidth="300" onAction="#openWorkforceManagement"/>
+    <Button text="Continuous Improvement" layoutX="50" layoutY="340" prefWidth="300" onAction="#openContinuousImprovement"/>
+
+</AnchorPane>
+

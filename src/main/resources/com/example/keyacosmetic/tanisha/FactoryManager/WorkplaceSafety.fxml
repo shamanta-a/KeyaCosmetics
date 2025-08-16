@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="405.0" prefWidth="407.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.final_project_summer.WorkplaceSafetyController">
+    <Label layoutX="20" layoutY="20" text="Report Safety Incident" />
+    <TextArea fx:id="incidentReportField" layoutX="20" layoutY="60" prefHeight="100" prefWidth="300" promptText="Enter Incident Report" />
+    <Button layoutX="20" layoutY="170" onAction="#handleValidateChecklist" text="Validate Checklist" />
+    <Label fx:id="complianceLabel" layoutX="20" layoutY="210" text="Safety compliance %" />
+</AnchorPane>
